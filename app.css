@@ -1,0 +1,23 @@
+body {
+    min-height: 100vh;
+    background-color: hsl(172, 67%, 45%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+.heading {
+    display: block;
+    letter-spacing: .5em;
+}
