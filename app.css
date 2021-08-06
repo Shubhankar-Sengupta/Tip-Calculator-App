@@ -8,10 +8,20 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
+
+label {
+  margin-bottom: 0px;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
   }
+
+.content {
+  background-color: hsl(0, 0%, 100%);
+
+}
 
 .attribution a {
     color: hsl(228, 45%, 44%);
@@ -24,6 +34,9 @@ body {
     font-weight: 700;
 }
 
+.newline {
+  display: block;
+}
 
 h1 {
     text-align: center;
