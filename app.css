@@ -1,9 +1,15 @@
 
 body {
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: hsl(172, 67%, 45%);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Space Mono', monospace;
+}
+
+div {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
 }
