@@ -166,7 +166,11 @@ footer {
 
   .tpamt {
     margin-top: .3em;
-    font-size: .62em;
+    font-size: .8em;
+  }
+
+  .tpamt1 {
+    font-size: .8em;
   }
 
   .amount{
@@ -179,7 +183,7 @@ footer {
   }
 
   .tot1 {
-    font-size: .7em;
+    font-size: .8em;
   }
 
   .amount1 {
