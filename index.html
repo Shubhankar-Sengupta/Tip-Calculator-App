@@ -21,33 +21,64 @@
 
 <body>
 
-
   <main>
 
-    <div> SPLI </div>
-    <div>TTER</div>
+    <p>SPLI</p>
+    <p>TTER </p>
 
-    Bill
-    Select Tip %
-    5%
-    10%
-    15%
-    25%
-    50%
-    Custom
+    <div class="container set">
 
-    Number of People
+      <div class="row topMargin justify-content-between">
 
-    Tip Amount
-    / person
+        <div class="col-5">
 
-    Total
-    / person
+          Bill
+          Select Tip %
+          5%
+          10%
+          15%
+          25%
+          50%
+          Custom
 
-    Reset
+          Number of People
+
+        </div>
+
+        <div class="col-5">
+
+          <div class="row topMargin tipColor radius">
+
+            <div class="col-12 gap">
+
+              Tip Amount
+              / person
+
+            </div>
+
+
+            <div class="col-12 gap">
+
+              Total
+              / person
+
+              <button class="reset btn btn-block margin">Reset</button>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="app.js"></script>
 
   </main>
-  <script src="app.js"></script>
 
 </body>
 

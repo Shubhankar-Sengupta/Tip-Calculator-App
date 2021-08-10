@@ -8,8 +8,43 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
-div {
+p {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
+}
+
+.set {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.3em;
+}
+
+.gap {
+  padding-top: 1.2em;
+}
+
+.topMargin {
+  padding-right: 1.2em;
+  padding-top: 1.5em;
+  padding-bottom: 1.2em;
+  padding-left: 1.2em;
+}
+
+.tipColor {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(185, 41%, 84%);
+}
+
+.reset {
+  margin-top: 1.2em;
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+
+.radius {
+  border-radius: 1em;
+}
+
+.margin {
+  margin-top: 5em;
 }
