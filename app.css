@@ -1,7 +1,7 @@
 
 body {
     min-height: 80vh;
-    background-color: hsl(172, 67%, 45%);
+    background-color: hsl(185, 41%, 84%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +12,38 @@ p {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
+}
+
+
+input {
+  display: block;
+}
+
+label {
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+  font-size: .9em;
+}
+
+footer {
+  color: hsl(184, 14%, 56%);
+  display: inline-block;
+}
+
+#people {
+  margin-top: 1.2em;
+}
+
+
+.blurp {
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 1.2em;
+}
+
+.header {
+  margin-bottom: 30px;
 }
 
 .set {
@@ -47,4 +79,44 @@ p {
 
 .margin {
   margin-top: 5em;
+}
+
+
+.amount{
+  position: relative;
+  top: .2em;
+  font-size: 40px;
+  width: 50%;
+  display: inline-block;
+  margin-left: 1.9em;
+  text-align: end;
+}
+
+.amount1{
+  position: relative;
+  top: .3em;
+  font-size: 40px;
+  width: 50%;
+  display: inline-block;
+  margin-left: 3em;
+  text-align: end;
+}
+
+.tpamt {
+  font-size: 14px;
+}
+
+.tot {
+  font-size: 14px;
+}
+
+.color1 {
+  color: hsl(189, 41%, 97%);
+  background-color: hsl(183, 100%, 15%);
+  width: 6em;
+  margin-top: 1.2em;
+}
+
+.sizing {
+  width: 7em;
 }

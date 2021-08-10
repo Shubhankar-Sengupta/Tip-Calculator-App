@@ -23,44 +23,60 @@
 
   <main>
 
-    <p>SPLI</p>
-    <p>TTER </p>
+    <section class="header">
+      <p>SPLI</p>
+      <p>TTER </p>
+    </section>
 
     <div class="container set">
 
       <div class="row topMargin justify-content-between">
 
-        <div class="col-5">
+        <div class="col-md-5">
 
-          Bill
-          Select Tip %
-          5%
-          10%
-          15%
-          25%
-          50%
-          Custom
+          <label for="total">Bill</label>
+          <input type="text" id="total" class="form-control form-control-sm" placeholder="0">
 
-          Number of People
+          <span class="blurp">Select Tip %</span>
+
+          <div aria-label="buttons">
+
+              <button class="btn btn-lg color1">5%</button>
+              <button class="btn btn-lg color1">10%</button>
+              <button class="btn btn-lg color1">15%</button>
+              <button class="btn btn-lg color1">25%</button>
+              <button class="btn btn-lg color1">50%</button>
+              <input type="text" placeholder="Custom" class="form-control form-control-sm sizing">
+           
+          </div>
+
+          
+          <label for="people">Number of People</label>
+
+          <input type="text" id="people" class="form-control form-control-sm" placeholder="0">
 
         </div>
 
-        <div class="col-5">
+        <div class="col-md-5">
 
           <div class="row topMargin tipColor radius">
 
-            <div class="col-12 gap">
+            <div class="col-md-12 gap">
 
-              Tip Amount
-              / person
+              <span class="tpamt">Tip Amount</span> <span class="amount">$0.00</span>
+              <footer class="tpamt">/person</footer>
+
+
 
             </div>
 
 
-            <div class="col-12 gap">
+            <div class="col-md-12 gap">
 
-              Total
-              / person
+              <span class="tot"> Total </span> <span class="amount1">$0.00</span>
+              <footer class="tot">/person</footer>
+
+
 
               <button class="reset btn btn-block margin">Reset</button>
 
