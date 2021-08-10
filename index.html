@@ -34,24 +34,25 @@
 
         <div class="col-md-5">
 
-          <label for="total">Bill</label>
+          <label class="total" for="total">Bill</label>
           <input type="text" id="total" class="form-control form-control-sm" placeholder="0">
 
           <span class="blurp">Select Tip %</span>
 
-          <div aria-label="buttons">
+          <div class="settle" aria-label="buttons">
 
-              <button class="btn btn-lg color1">5%</button>
-              <button class="btn btn-lg color1">10%</button>
-              <button class="btn btn-lg color1">15%</button>
-              <button class="btn btn-lg color1">25%</button>
-              <button class="btn btn-lg color1">50%</button>
-              <input type="text" placeholder="Custom" class="form-control form-control-sm sizing">
-           
+            <button class="btn btn-lg color1">5%</button>
+            <button class="btn btn-lg color1">10%</button>
+            <button class="btn btn-lg color1">15%</button>
+            <button class="btn btn-lg color1">25%</button>
+            <button class="btn btn-lg color1">50%</button>
+
+            <input type="text" placeholder="Custom" class="form-control form-control-sm sizing btn btn btn-lg color2">
+
           </div>
 
-          
-          <label for="people">Number of People</label>
+
+          <label class="people" for="people">Number of People</label>
 
           <input type="text" id="people" class="form-control form-control-sm" placeholder="0">
 
@@ -61,30 +62,24 @@
 
           <div class="row topMargin tipColor radius">
 
-            <div class="col-md-12 gap">
+            <div class="col-md-12 gap d-flex justify-content-between">
 
-              <span class="tpamt">Tip Amount</span> <span class="amount">$0.00</span>
-              <footer class="tpamt">/person</footer>
-
+              <span class="tpamt">Tip Amount <footer class="tpamt1">/person</footer></span> <span
+                class="amount">$0.00</span>
 
 
             </div>
 
 
-            <div class="col-md-12 gap">
+            <div class="col-md-12 gap d-flex justify-content-between">
 
-              <span class="tot"> Total </span> <span class="amount1">$0.00</span>
-              <footer class="tot">/person</footer>
-
-
-
-              <button class="reset btn btn-block margin">Reset</button>
+              <span class="tot"> Total <footer class="tot1">/person</footer></span> <span class="amount1">$0.00</span>
 
             </div>
 
+            <button class="reset btn btn-block margin">Reset</button>
 
           </div>
-
 
         </div>
 

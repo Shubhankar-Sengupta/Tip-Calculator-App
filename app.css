@@ -1,39 +1,15 @@
-
-body {
-    min-height: 80vh;
-    background-color: hsl(185, 41%, 84%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Space Mono', monospace;
-}
-
-p {
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-}
-
-
-input {
-  display: block;
-}
-
-label {
-  color: hsl(186, 14%, 43%);
-  font-weight: 700;
-  font-size: .9em;
-}
-
-footer {
-  color: hsl(184, 14%, 56%);
-  display: inline-block;
-}
-
 #people {
   margin-top: 1.2em;
 }
 
+
+div.settle button:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+
+.settle {
+  margin-bottom: 1.5em;
+}
 
 .blurp {
   color: hsl(186, 14%, 43%);
@@ -53,6 +29,7 @@ footer {
 
 .gap {
   padding-top: 1.2em;
+  margin-bottom: 1.9em;
 }
 
 .topMargin {
@@ -69,7 +46,7 @@ footer {
 
 .reset {
   margin-top: 1.2em;
-  background-color: hsl(185, 41%, 84%);
+  background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
 
@@ -83,31 +60,33 @@ footer {
 
 
 .amount{
-  position: relative;
-  top: .2em;
   font-size: 40px;
-  width: 50%;
-  display: inline-block;
-  margin-left: 1.9em;
-  text-align: end;
 }
 
 .amount1{
-  position: relative;
-  top: .3em;
   font-size: 40px;
-  width: 50%;
-  display: inline-block;
-  margin-left: 3em;
-  text-align: end;
 }
 
 .tpamt {
+  margin-top: 1em;
   font-size: 14px;
+  display: inline-block;
+}
+
+.tpamt1 {
+  display: block;
 }
 
 .tot {
+  margin-top: 1em;
   font-size: 14px;
+  display: inline-block;
+}
+
+.tot1 {
+  font-size: 14px;
+  display: block;
+
 }
 
 .color1 {
@@ -117,6 +96,139 @@ footer {
   margin-top: 1.2em;
 }
 
+.color2 {
+  background-color: hsl(189, 41%, 97%);
+  width: 6em;
+  margin-top: 1.2em;
+  font-weight: 700;
+}
+
 .sizing {
-  width: 7em;
+  display: inline-block;
+  width: 6.1em;
+  height: 2.4em;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(185, 41%, 84%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Space Mono', monospace;
+}
+
+p {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+input {
+ display: block;
+}
+
+label {
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+  font-size: .9em;
+}
+
+footer {
+  color: hsl(184, 14%, 56%);
+  display: inline-block;
+}
+
+@media (min-width:768px) and (max-width:992px) {
+
+  .total {
+    font-size: .7em;
+    
+  }
+
+  .color1 {
+    font-size: .7em;
+  }
+
+  .color2 {
+    font-size: .7em;
+  }
+
+  .blurp {
+    font-size: .6em;
+  }
+
+
+  .people{
+    font-size: .8em;
+  }
+
+  .tpamt {
+    margin-top: .3em;
+    font-size: .62em;
+  }
+
+  .amount{
+    font-size: 1.2em;
+  }
+
+  .tot{
+    margin-top: .3em;
+    font-size: .8em;
+  }
+
+  .tot1 {
+    font-size: .7em;
+  }
+
+  .amount1 {
+    font-size: 1.1em; 
+  }
+
+}
+
+
+@media (min-width:992px) and (max-width:1200px) {
+
+  .total {
+    font-size: .9em;
+    
+  }
+
+  .color1 {
+    font-size: .9em;
+  }
+
+  .color2 {
+    font-size: .9em;
+  }
+
+  .blurp {
+    font-size: .9em;
+
+  }
+
+
+  .people{
+    font-size: .9em;
+
+  }
+
+  .tpamt {
+    font-size: .9em;
+  }
+
+  .amount{
+    font-size: 1.6em;
+  }
+
+  .tot{
+    font-size: .9em;
+  }
+
+  .amount1 {
+    font-size: 1.6em;
+    margin-left: 3.7em;
+  }
 }
