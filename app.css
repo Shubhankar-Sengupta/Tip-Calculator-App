@@ -2,6 +2,15 @@
   margin-top: 1.2em;
 }
 
+#people::placeholder {
+  padding-left: 25em; 
+}
+
+#total::placeholder {
+  padding-left: 25em; 
+}
+
+
 div.settle button:hover {
   background-color: hsl(172, 67%, 45%);
 }
@@ -143,6 +152,8 @@ input[type= "text"] {
   border-left: none;
   background-color: hsl(189, 41%, 97%);
 }
+
+
 
 @media (min-width:768px) and (max-width:992px) {
 
