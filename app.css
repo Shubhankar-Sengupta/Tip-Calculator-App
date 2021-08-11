@@ -2,13 +2,8 @@
   margin-top: 1.2em;
 }
 
-
 div.settle button:hover {
   background-color: hsl(172, 67%, 45%);
-}
-
-.settle {
-  margin-bottom: 1.5em;
 }
 
 .blurp {
@@ -109,6 +104,10 @@ div.settle button:hover {
   height: 2.4em;
 }
 
+.back {
+  background-color: hsl(189, 41%, 97%);
+}
+
 body {
   min-height: 100vh;
   background-color: hsl(185, 41%, 84%);
@@ -138,6 +137,11 @@ label {
 footer {
   color: hsl(184, 14%, 56%);
   display: inline-block;
+}
+
+input[type= "text"] {
+  border-left: none;
+  background-color: hsl(189, 41%, 97%);
 }
 
 @media (min-width:768px) and (max-width:992px) {
@@ -236,3 +240,6 @@ footer {
     margin-left: 3.7em;
   }
 }
+
+
+
