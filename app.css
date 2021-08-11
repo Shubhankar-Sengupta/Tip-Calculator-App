@@ -3,11 +3,11 @@
 }
 
 #people::placeholder {
-  padding-left: 25em; 
+  text-align: end;
 }
 
 #total::placeholder {
-  padding-left: 25em; 
+  text-align: end;
 }
 
 
