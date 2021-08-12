@@ -8,7 +8,6 @@ const reset = document.querySelector('.reset');
 const select = document.querySelector('#warning');
 
 
-
 function Add(evt) {
 
     if (evt.target === inp2) {
@@ -42,6 +41,7 @@ function runListener() {
     }
 
     inp2.addEventListener('change', Add);
+
 }
 
 
@@ -57,19 +57,26 @@ function removeListener() {
 }
 
 
+
 bill.addEventListener('input', function main(evt) {
 
     if (evt.target.value === '') {
         Reset();
     }
 
+
     numPpl.addEventListener('change', (evt) => {
+
+        initialSetting();
+
+        spanVal1.innerHTML = `$0.00`;
+        spanVal.innerHTML = `$0.00`;
 
         select.innerHTML = '';
 
-        if (numPpl.value === '' || numPpl.value === "0") {
+        if (numPpl.value === '' || numPpl.value <= "0") {
             removeListener();
-            select.innerHTML = `<b style="color:red;">No of People Can't be zero <b>`;
+            select.innerHTML = `<b style="color:red;"> Can't be zero <b>`;
         }
 
         else runListener();
@@ -77,10 +84,17 @@ bill.addEventListener('input', function main(evt) {
     })
 
     if (numPpl.value === '' || numPpl.value === "0") {
-        select.innerHTML = `<b style="color:red;">No of People Can't be zero <b>`;
+        select.innerHTML = `<b style="color:red;">Can't be zero <b>`;
     }
 
 })
+
+
+
+function initialSetting() {
+    inp2.value = '';
+    removeListener();
+}
 
 
 function Reset() {
