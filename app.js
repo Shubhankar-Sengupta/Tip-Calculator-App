@@ -12,8 +12,8 @@ function Add(evt) {
 
     if (evt.target === inp2) {
 
-        const noOfPpl = parseInt(numPpl.value);
         const percVal = parseInt(evt.target.value) / 100;
+        const noOfPpl = parseInt(numPpl.value);
         const billVal = parseInt(bill.value);
 
         spanVal.innerHTML = `$${((percVal * billVal) / noOfPpl).toFixed(2)}`;
@@ -23,8 +23,9 @@ function Add(evt) {
     }
 
     else {
-        const noOfPpl = parseInt(numPpl.value);
+        
         const percVal = parseInt(evt.target.innerHTML) / 100;
+        const noOfPpl = parseInt(numPpl.value);
         const billVal = parseInt(bill.value);
 
         spanVal.innerHTML = `$${((percVal * billVal) / noOfPpl).toFixed(2)}`;
@@ -60,6 +61,8 @@ function removeListener() {
 
 bill.addEventListener('input', function main(evt) {
 
+    tipTopZero();
+
     if (evt.target.value === '') {
         Reset();
     }
@@ -68,44 +71,49 @@ bill.addEventListener('input', function main(evt) {
     numPpl.addEventListener('change', (evt) => {
 
         initialSetting();
-
-        spanVal1.innerHTML = `$0.00`;
-        spanVal.innerHTML = `$0.00`;
-
         select.innerHTML = '';
-
-        if (numPpl.value === '' || numPpl.value <= "0") {
-            removeListener();
-            select.innerHTML = `<b style="color:red;"> Can't be zero <b>`;
-        }
-
-        else runListener();
-
+        mainOperationBeg();
+            
     })
 
-    if (numPpl.value === '' || numPpl.value === "0") {
+    if (numPpl.value === '' || numPpl.value <= "0") {
         select.innerHTML = `<b style="color:red;">Can't be zero <b>`;
     }
 
 })
 
 
+function mainOperationBeg() {
+
+    if (numPpl.value === '' || numPpl.value <= "0") {
+        removeListener();
+        select.innerHTML = `<b style="color:red;"> Can't be zero <b>`;
+    }
+
+    else runListener();
+
+}
 
 function initialSetting() {
-    inp2.value = '';
+    tipTopZero();
     removeListener();
+    inp2.value = '';
+}
+
+
+function tipTopZero() {
+    spanVal1.innerHTML = `$0.00`;
+    spanVal.innerHTML = `$0.00`;
 }
 
 
 function Reset() {
 
-    spanVal1.innerHTML = `$0.00`;
-    spanVal.innerHTML = `$0.00`;
+    tipTopZero();
+    initialSetting();
     select.innerHTML = '';
     bill.value = ''
-    numPpl.value = ''
-    inp2.value = ''
-    removeListener();
+    numPpl.value = ''  
 
 }
 
