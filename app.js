@@ -8,6 +8,8 @@ const reset = document.querySelector('.reset');
 const select = document.querySelector('#warning');
 
 
+
+
 function Add(evt) {
 
     if (evt.target === inp2) {
