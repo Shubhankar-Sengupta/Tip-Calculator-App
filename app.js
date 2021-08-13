@@ -8,6 +8,18 @@ const reset = document.querySelector('.reset');
 const select = document.querySelector('#warning');
 
 
+
+function standard(varValue) {
+
+    const noOfPpl = parseInt(numPpl.value);
+    const billVal = parseInt(bill.value);
+
+    spanVal.innerHTML = `$${((varValue * billVal) / noOfPpl).toFixed(2)}`;
+    spanVal1.innerHTML = `$${((billVal + (varValue * billVal)) / noOfPpl).toFixed(2)}`;
+    select.innerHTML = '';
+
+}
+
 function Declaration(evt) {
 
     if (evt.target.value <= "0") tipTopZero();
@@ -15,29 +27,16 @@ function Declaration(evt) {
     else {
 
         const percVal = parseInt(evt.target.value) / 100;
-        const noOfPpl = parseInt(numPpl.value);
-        const billVal = parseInt(bill.value);
-
-        spanVal.innerHTML = `$${((percVal * billVal) / noOfPpl).toFixed(2)}`;
-        spanVal1.innerHTML = `$${((billVal + (percVal * billVal)) / noOfPpl).toFixed(2)}`;
-        select.innerHTML = ''
+        standard(percVal)
         evt.target.value = ''
-        
     }
 
-
 }
-
 
 function Declaration1(evt) {
 
     const percVal = parseInt(evt.target.innerHTML) / 100;
-    const noOfPpl = parseInt(numPpl.value);
-    const billVal = parseInt(bill.value);
-
-    spanVal.innerHTML = `$${((percVal * billVal) / noOfPpl).toFixed(2)}`;
-    spanVal1.innerHTML = `$${((billVal + (percVal * billVal)) / noOfPpl).toFixed(2)}`;
-    select.innerHTML = ''
+    standard(percVal);
 }
 
 
@@ -58,7 +57,6 @@ function runListener() {
     inp2.addEventListener('change', Add);
 
 }
-
 
 
 function removeListener() {
@@ -86,7 +84,7 @@ bill.addEventListener('input', function main(evt) {
 
     if (numPpl.value && numPpl.value > "0") runListener();
 
-    inp2.value= '';
+    inp2.value = '';
 
     tipTopZero();
 
