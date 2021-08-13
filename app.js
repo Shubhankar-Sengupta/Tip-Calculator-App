@@ -10,6 +10,10 @@ const select = document.querySelector('#warning');
 
 function Declaration(evt) {
 
+    if (evt.target.value <= "0") tipTopZero();
+
+    else {
+
         const percVal = parseInt(evt.target.value) / 100;
         const noOfPpl = parseInt(numPpl.value);
         const billVal = parseInt(bill.value);
@@ -18,6 +22,8 @@ function Declaration(evt) {
         spanVal1.innerHTML = `$${((billVal + (percVal * billVal)) / noOfPpl).toFixed(2)}`;
         evt.target.value = ''
         select.innerHTML = ''
+    }
+
 
 }
 
@@ -37,8 +43,7 @@ function Declaration1(evt) {
 function Add(evt) {
 
     if (evt.target === inp2) Declaration(evt);
-    
-    else  Declaration1(evt);
+    else Declaration1(evt);
 }
 
 
@@ -77,6 +82,10 @@ function People(evt) {
 
 
 bill.addEventListener('input', function main(evt) {
+
+    if (numPpl.value && numPpl.value > "0") {
+        runListener();
+    }
 
     tipTopZero();
 
