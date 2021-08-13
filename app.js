@@ -8,11 +8,7 @@ const reset = document.querySelector('.reset');
 const select = document.querySelector('#warning');
 
 
-
-
-function Add(evt) {
-
-    if (evt.target === inp2) {
+function Declaration(evt) {
 
         const percVal = parseInt(evt.target.value) / 100;
         const noOfPpl = parseInt(numPpl.value);
@@ -23,20 +19,28 @@ function Add(evt) {
         evt.target.value = ''
         select.innerHTML = ''
 
-    }
-
-    else {
-        
-        const percVal = parseInt(evt.target.innerHTML) / 100;
-        const noOfPpl = parseInt(numPpl.value);
-        const billVal = parseInt(bill.value);
-
-        spanVal.innerHTML = `$${((percVal * billVal) / noOfPpl).toFixed(2)}`;
-        spanVal1.innerHTML = `$${((billVal + (percVal * billVal)) / noOfPpl).toFixed(2)}`;
-        select.innerHTML = ''
-    }
-
 }
+
+
+function Declaration1(evt) {
+
+    const percVal = parseInt(evt.target.innerHTML) / 100;
+    const noOfPpl = parseInt(numPpl.value);
+    const billVal = parseInt(bill.value);
+
+    spanVal.innerHTML = `$${((percVal * billVal) / noOfPpl).toFixed(2)}`;
+    spanVal1.innerHTML = `$${((billVal + (percVal * billVal)) / noOfPpl).toFixed(2)}`;
+    select.innerHTML = ''
+}
+
+
+function Add(evt) {
+
+    if (evt.target === inp2) Declaration(evt);
+    
+    else  Declaration1(evt);
+}
+
 
 
 function runListener() {
@@ -63,12 +67,12 @@ function removeListener() {
 
 
 
-function People (evt) {
+function People(evt) {
 
     initialSetting();
     select.innerHTML = `<b style="color:red;">Select a Tip<b>`;
     mainOperationBeg();
-        
+
 }
 
 
@@ -123,7 +127,7 @@ function Reset() {
     initialSetting();
     select.innerHTML = '';
     bill.value = ''
-    numPpl.value = '' 
+    numPpl.value = ''
     numPpl.removeEventListener('change', People);
 
 }
