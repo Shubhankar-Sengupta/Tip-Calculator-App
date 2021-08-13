@@ -20,8 +20,9 @@ function Declaration(evt) {
 
         spanVal.innerHTML = `$${((percVal * billVal) / noOfPpl).toFixed(2)}`;
         spanVal1.innerHTML = `$${((billVal + (percVal * billVal)) / noOfPpl).toFixed(2)}`;
-        evt.target.value = ''
         select.innerHTML = ''
+        evt.target.value = ''
+        
     }
 
 
@@ -83,9 +84,9 @@ function People(evt) {
 
 bill.addEventListener('input', function main(evt) {
 
-    if (numPpl.value && numPpl.value > "0") {
-        runListener();
-    }
+    if (numPpl.value && numPpl.value > "0") runListener();
+
+    inp2.value= '';
 
     tipTopZero();
 
@@ -126,6 +127,7 @@ function initialSetting() {
 
 
 function tipTopZero() {
+
     spanVal1.innerHTML = `$0.00`;
     spanVal.innerHTML = `$0.00`;
 }
