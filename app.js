@@ -19,6 +19,7 @@ function Add(evt) {
         spanVal.innerHTML = `$${((percVal * billVal) / noOfPpl).toFixed(2)}`;
         spanVal1.innerHTML = `$${((billVal + (percVal * billVal)) / noOfPpl).toFixed(2)}`;
         evt.target.value = ''
+        select.innerHTML = ''
 
     }
 
@@ -30,6 +31,7 @@ function Add(evt) {
 
         spanVal.innerHTML = `$${((percVal * billVal) / noOfPpl).toFixed(2)}`;
         spanVal1.innerHTML = `$${((billVal + (percVal * billVal)) / noOfPpl).toFixed(2)}`;
+        select.innerHTML = ''
     }
 
 }
@@ -59,6 +61,15 @@ function removeListener() {
 
 
 
+function People (evt) {
+
+    initialSetting();
+    select.innerHTML = `<b style="color:red;">Select a Tip<b>`;
+    mainOperationBeg();
+        
+}
+
+
 bill.addEventListener('input', function main(evt) {
 
     tipTopZero();
@@ -68,16 +79,14 @@ bill.addEventListener('input', function main(evt) {
     }
 
 
-    numPpl.addEventListener('change', (evt) => {
-
-        initialSetting();
-        select.innerHTML = '';
-        mainOperationBeg();
-            
-    })
+    numPpl.addEventListener('change', People)
 
     if (numPpl.value === '' || numPpl.value <= "0") {
         select.innerHTML = `<b style="color:red;">Can't be zero <b>`;
+    }
+
+    else if (numPpl.value) {
+        select.innerHTML = `<b style="color:red;">Select a Tip<b>`;
     }
 
 })
@@ -109,11 +118,11 @@ function tipTopZero() {
 
 function Reset() {
 
-    tipTopZero();
     initialSetting();
     select.innerHTML = '';
     bill.value = ''
-    numPpl.value = ''  
+    numPpl.value = '' 
+    numPpl.removeEventListener('change', People);
 
 }
 
